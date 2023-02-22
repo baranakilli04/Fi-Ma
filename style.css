@@ -53,12 +53,6 @@ a {
   -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.43);
 }
-#header img {
-  width: 25px;
-  position: absolute;
-  left: 115px;
-  bottom: 33px;
-}
 #header h1 {
   font-size: 27px;
   min-width: 80px;
@@ -70,6 +64,7 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  opacity: 0;
 }
 #navbar li {
   list-style: none;
@@ -98,7 +93,7 @@ a {
   bottom: -4px;
   left: 10px;
 }
-#navbar .right {
+#navbar .login {
   background-color: rgb(183, 183, 183);
   border-radius: 20px;
   display: flex;
@@ -109,7 +104,7 @@ a {
   margin-left: 20px;
   margin-right: 10px;
 }
-#navbar .right a {
+#navbar .login a {
   display: flex;
   font-size: 18px;
   align-items: center;
@@ -118,11 +113,16 @@ a {
   font-weight: 700;
   transition: 0.2s ease;
 }
-#navbar .right a i {
+#navbar .login a i {
   margin-right: 10px;
 }
-#navbar .right a:hover {
+#navbar .login a:hover {
   color: rgb(99, 0, 238);
+}
+
+#mobile {
+  display: none;
+  align-items: center;
 }
 
 #hero {
@@ -186,7 +186,6 @@ a {
   padding: 10px 12px;
   border: solid 1px #d7cce7;
   border-radius: 25px;
-  cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   -webkit-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   -moz-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -220,6 +219,7 @@ a {
 #product1 .pro .des i {
   font-size: 14px;
   color: rgb(255, 204, 0);
+  display: none;
 }
 #product1 .pro .des h4 {
   padding-top: 7px;
@@ -238,6 +238,7 @@ a {
   position: absolute;
   right: 20px;
   bottom: 20px;
+  opacity: 0;
 }
 #product1 .pro:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
@@ -264,15 +265,16 @@ footer {
   justify-content: space-between;
 }
 footer h4 {
-  font-size: 16px;
+  font-size: 18px;
   padding-bottom: 20px;
 }
 footer .logo {
   margin-bottom: 20px;
 }
 footer p {
-  font-size: 18px;
-  margin: 0 0 8px 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 footer a {
   margin-bottom: 10px;
@@ -282,21 +284,23 @@ footer .col {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
+  padding-right: 20px;
 }
 footer h2 {
   font-size: 30px;
 }
 footer button {
   border-radius: 20px;
-  margin-top: 20px;
+  margin: 10px 0 10px 0;
   background-color: rgb(240, 240, 240);
   border: black solid 1.5px;
 }
 footer button a {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
+  margin-bottom: 0px;
 }
 footer button a i {
   font-size: 20px;
@@ -304,18 +308,102 @@ footer button a i {
 }
 footer button a h4 {
   font-size: 16px;
-  padding-bottom: 0;
+  padding-bottom: 0px;
 }
 footer button:hover {
   background-color: rgb(220, 220, 220);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 799px) {
   #hero {
     flex-wrap: wrap;
+    padding-bottom: 0px;
+    padding-top: 61px;
+  }
+  #hero .left {
+    margin-right: 0;
+  }
+  #hero .left h1 {
+    font-size: 37.5px;
+    line-height: 48px;
+  }
+  #hero .left h2 {
+    font-size: 35.5px;
+    line-height: 40.5px;
+    color: #222;
+  }
+  #hero .left h4 {
+    font-size: 15px;
+    color: #222;
+  }
+  #hero .left p {
+    font-size: 15px;
+    color: #4f465b;
+    margin: 15px 0px 0px 0;
   }
   #hero .right {
-    max-height: 500px;
-    padding: 300px 0px;
+    position: relative;
+    aspect-ratio: none;
+    width: 95%;
+    height: 100%;
+  }
+  #hero .right img {
+    border-radius: 40px;
+    box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.43);
+    -webkit-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.43);
+  }
+  #hero .right #photo1 {
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 12.5%;
+    left: 0;
+    height: 58%;
+  }
+  #hero .right #photo2 {
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 25%;
+    right: 0;
+    height: 58%;
+  }
+  #mobile {
+    display: none;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    background-color: #e9e3f3;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 20px 0 0 10px;
+  }
+  #navbar #li-login {
+    margin-bottom: 40px;
+  }
+  #navbar li:not(#li-login) {
+    margin-bottom: 25px;
+    align-self: flex-start;
+  }
+  #navbar .login {
+    width: 220px;
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 5px;
+  }
+  #navbar .login a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #navbar .login i {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

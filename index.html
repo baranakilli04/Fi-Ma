@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/faeeb32244.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <title>Fi-Ma</title>
 </head>
 <body>
     <section id="header">
         <h1>Fİ-MA</h1>
-        <img src="./images/pngwing.com.png" alt="">
 
         <div>
             <ul id="navbar">
@@ -19,14 +19,19 @@
                 <li><a href="ürünler.html">Tüm Ürünlerimiz</a></li>
                 <li><a href="kategori.html">Kategoriler</a></li>
                 <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                <li><a id="shopping-cart" href="sepet.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-
-                <div class="right">
-                    <a href="giris.html">
-                        <i class="fa-regular fa-user"></i>
-                        Giriş Yap</a>
-                </div>
+                <li><a href="sepet.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li id="li-login">
+                    <div class="login">
+                        <a href="giris.html" id="a-login">
+                            <i class="fa-regular fa-user"></i>
+                            Giriş Yap</a>
+                    </div>
+                </li>
             </ul>
+        </div>
+        <div id="mobile">
+            <a href="sepet.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-outdent"></i>
         </div>
     </section>
     <section id="hero">
@@ -45,7 +50,7 @@
         <h2>Sevilen Ürünler</h2>
         <p>Yeni Koleksiyon</p>
         <div class="pro-container">
-            <div class="pro"><img src="./images/000009.jpg" alt="">
+            <div class="pro"><img src="./images/000009.JPG" alt="">
                 <div class="des">
                     <span>fi-ma</span>
                     <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
@@ -63,7 +68,7 @@
             <div class="pro"><img src="./images/000011.JPG" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Kalpli Kolye</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -71,14 +76,14 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <h4>149.99 TL</h4>
+                    <h4>139.99 TL</h4>
                 </div>
                 <a href=""><i class="fa-solid fa-cart-plus cart"></i></a>
             </div>
             <div class="pro"><img src="./images/000004.JPG" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Halkalı Kelebekli Bileklik</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -90,10 +95,10 @@
                 </div>
                 <a href=""><i class="fa-solid fa-cart-plus cart"></i></a>
             </div>
-            <div class="pro"><img src="./images/000013.jpg" alt="">
+            <div class="pro"><img src="./images/000013.JPG" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Taşlı Kolye</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -101,14 +106,14 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <h4>149.99 TL</h4>
+                    <h4>139.99 TL</h4>
                 </div>
                 <a href=""><i class="fa-solid fa-cart-plus cart"></i></a>
             </div>
             <div class="pro"><img src="./images/000005.JPG" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Sonsuzluk Bileklik</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -123,7 +128,7 @@
             <div class="pro"><img src="./images/000006.jpg" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Çiçek Desenli Bileklik</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -138,7 +143,7 @@
             <div class="pro"><img src="./images/000007.jpg" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Hayat Ağaçlı Bileklik</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -153,7 +158,7 @@
             <div class="pro"><img src="./images/000008.jpg" alt="">
                 <div class="des">
                     <span>fi-ma</span>
-                    <h5>Paslanmaz Çelik Taşlı Bileklik</h5>
+                    <h5>Paslanmaz Çelik Taşlı Burgu Bileklik</h5>
                     <div class="star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -179,7 +184,6 @@
             <p><strong>Telefon: </strong>+90 (536) 595 30 57</p>
             <p><strong>Çalışma Saatleri: </strong>10:00-23:00</p>
             <div class="follow">
-                <h4>Takip Et</h4>
                 <button>
                     <a href="#">
                         <i class="fa-brands fa-square-instagram"></i>
